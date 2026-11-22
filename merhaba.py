@@ -12,8 +12,9 @@ dogum_yili = int(input("Doğum yılınız nedir? "))
 # Bugünün tarihinden içinde bulunduğumuz yılı alıyoruz
 bu_yil = date.today().year
 
-# Yaşı, bu yıldan doğum yılını çıkararak hesaplıyoruz
-yas = bu_yil - dogum_yili
-
-# Kişiye özel karşılama mesajını ekrana yazdırıyoruz
-print(f"Merhaba {ad}! Bu yıl {yas} yaşındasın. Kodlama dünyasına hoş geldin!")
+# Doğum yılı içinde bulunulan yıldan büyükse uyarı veriyoruz; değilse yaşı hesaplıyoruz
+if dogum_yili > bu_yil:
+    print(f"Uyarı: {dogum_yili} yılı {bu_yil} yılından büyüktür. Lütfen geçerli bir doğum yılı girin.")
+else:
+    yas = bu_yil - dogum_yili
+    print(f"Merhaba {ad}! Bu yıl {yas} yaşındasın. Kodlama dünyasına hoş geldin!")
