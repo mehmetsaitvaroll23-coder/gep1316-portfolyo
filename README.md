@@ -1,1 +1,0 @@
-# gep1316-portfolyo-
